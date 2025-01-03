@@ -76,19 +76,19 @@
           then "sha256:${crate.cksum}"
           else hash;
       in
-        pkgs.rustPlatform.buildRustPackage rec {
-          inherit pname;
-          version = v;
-          src = fetchCrate name {
+        pkgs.rustPlatform.buildRustPackage (rec {
             inherit pname;
             version = v;
-            hash = h;
-          };
-          cargoLock = {
-            lockFile = "${src}/Cargo.lock";
-          };
-        }
-        // (removeAttrs flags ["pname" "version" "hash"]);
+            src = fetchCrate name {
+              inherit pname;
+              version = v;
+              hash = h;
+            };
+            cargoLock = {
+              lockFile = "${src}/Cargo.lock";
+            };
+          }
+          // (removeAttrs flags ["pname" "version" "hash"]));
     };
   };
 }
