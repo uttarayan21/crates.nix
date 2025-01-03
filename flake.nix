@@ -37,8 +37,8 @@
         then lib.lists.last (getVersions name)
         else lib.lists.findFirst (v: v.vers == version) (throw "Unable to find a version for ${name} with ${version}") (getVersions name);
     in rec {
-      fetchCrate = {
-        pname,
+      fetchCrate = name: {
+        pname ? name,
         version ? "*",
         hash ? null,
       }: let
@@ -79,7 +79,7 @@
         pkgs.rustPlatform.buildRustPackage rec {
           inherit pname;
           version = v;
-          src = fetchCrate {
+          src = fetchCrate name {
             inherit pname;
             version = v;
             hash = h;
