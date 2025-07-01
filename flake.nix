@@ -2,7 +2,7 @@
   description = "crates.nix";
   inputs = {
     crates-io-index = {
-      url = "github:rust-lang/crates.io-index";
+      url = "git+https://github.com/rust-lang/crates.io-index?shallow=1";
       flake = false;
     };
   };
