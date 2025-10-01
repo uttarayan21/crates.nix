@@ -8,7 +8,7 @@ By default this will use the latest version available on crates.io (you can use 
 
 This has two main functions `buildCrate` and `fetchCrate`
 
-## `buildCrate'
+## `buildCrate`
 ### Signature
 `buildCrate "string" {attrs}`
 ### Example

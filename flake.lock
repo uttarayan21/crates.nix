@@ -1,0 +1,28 @@
+{
+  "nodes": {
+    "crates-io-index": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1759304910,
+        "narHash": "sha256-nf7smRifEW3u/d+dATK06T0RtKV8xURkug/8MI4AXlQ=",
+        "ref": "refs/heads/master",
+        "rev": "5f523323e8e03c9b94f2f9ed09a291e50dec2f40",
+        "shallow": true,
+        "type": "git",
+        "url": "https://github.com/rust-lang/crates.io-index"
+      },
+      "original": {
+        "shallow": true,
+        "type": "git",
+        "url": "https://github.com/rust-lang/crates.io-index"
+      }
+    },
+    "root": {
+      "inputs": {
+        "crates-io-index": "crates-io-index"
+      }
+    }
+  },
+  "root": "root",
+  "version": 7
+}
